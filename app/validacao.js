@@ -1,10 +1,12 @@
 function verificaSeOChutePossuiValorValido(chute) {
   const numero = +chute
+  const valor = chute
 
   if(chuteForInvalido(numero)){
     elementoChute.innerHTML += '<div>Valor inválido</div>'
     return 
   }
+
   if(numeroForMaiorOuMenorQueOPermitido(numero)) {
     elementoChute.innerHTML += `
       <div>Valor inválido: fale um número entre ${menorValor} e ${maiorValor}</div>
@@ -27,6 +29,10 @@ function verificaSeOChutePossuiValorValido(chute) {
     <div>O número secreto é maior <i class="fa-solid fa-arrow-up-long"></i></div>
   `
   }
+}
+
+function gameOver(valor){
+  return valor
 }
 
 function chuteForInvalido(numero) {
